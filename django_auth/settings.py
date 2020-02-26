@@ -102,6 +102,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Custom authentication method as Django by default only supports logging in using a username 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth'
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
